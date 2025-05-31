@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrate - Water Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💧 Hydrate</h1>
+            <p class="subtitle">Stay refreshed, stay healthy</p>
+        </header>
+
+        <main>
+            <section class="tracking-section">
+                <div class="daily-goal">
+                    <h2>Today's Progress</h2>
+                    <div class="progress-circle">
+                        <div class="progress-ring">
+                            <svg width="200" height="200">
+                                <circle cx="100" cy="100" r="85" fill="none" stroke="#e0f2f1" stroke-width="10"/>
+                                <circle id="progress-circle" cx="100" cy="100" r="85" fill="none" stroke="#26a69a" stroke-width="10" stroke-linecap="round" stroke-dasharray="534.07" stroke-dashoffset="534.07"/>
+                            </svg>
+                        </div>
+                        <div class="progress-content">
+                            <div class="water-icon">💧</div>
+                            <div class="glass-count">
+                                <span id="current-glasses">0</span>
+                                <span class="total">/ 8</span>
+                            </div>
+                            <div class="glasses-text">glasses</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-water">
+                    <button id="add-glass-btn" class="glass-btn">
+                        <div class="glass-icon">🥤</div>
+                        <span>Add Glass</span>
+                    </button>
+                </div>
+
+                <div class="today-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="ml-count">0</span>
+                        <span class="stat-label">ml consumed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="percentage">0</span>
+                        <span class="stat-label">% of daily goal</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h3>Recent Days</h3>
+                <div id="history-container" class="history-list">
+                    <!-- History items will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
